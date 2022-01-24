@@ -15,8 +15,7 @@ const CREATE ="CREATE";
 
 export default function Appointment(props) {
   
-  const { student, interviewer, time, interview } = props;
-  const interviewers = [];
+  const { student, interviewer, time, interview, interviewers } = props;
   const { mode, transition, back } = useVisualMode(
       interview ? SHOW : EMPTY
     );
