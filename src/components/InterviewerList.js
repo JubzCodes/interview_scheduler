@@ -14,8 +14,10 @@ export default function InterviewerList(props) {
       setInterviewer={() => onChange(int.id)}
     />
   ));
-  // console.log("interviewers", interviewers)
 
+  // InterviewerList.propTypes = {
+  //   interviewers: PropTypes.array.isRequired,
+  // };
   return (
     <section className="interviewers">
       <h4 className="interviewers__header text--light">Interviewer</h4>

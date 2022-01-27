@@ -4,19 +4,37 @@ import InterviewerList from "components/InterviewerList";
 import Button from "components/Button";
 
 export default function Form(props) {
-  const { student, interviewer, interviewers, onSave, onCancel, save } = props;
+  const { student, interviewer, interviewers, onSave, onCancel } = props;
+
   const [studentName, setStudent] = useState(student || "");
   const [interviewerID, setInterviewer] = useState(interviewer || null);
+  const [error, setError] = useState("");
 
   const reset = () => {
     setStudent("");
-    setInterviewer("");
-    onCancel();
+    setInterviewer(null);
   };
 
   const cancel = () => {
     reset();
+    onCancel()
   };
+
+  function validate () {
+    if (!studentName) {
+    setError("Cant do that!")
+    return;
+    }
+  
+    if (!interviewerID) {
+      setError("gweh!")
+      return;
+    }
+    setError("");
+    onSave(studentName, interviewerID);
+  }
+  
+
 
   return (
     <main className="appointment__card appointment__card--create">
@@ -31,6 +49,9 @@ export default function Form(props) {
             onChange={(event) => setStudent(event.target.value)}
           />
         </form>
+        <section className="appointment__validation">
+          {error}
+        </section>
         <InterviewerList
           interviewers={interviewers}
           selected={interviewerID}
@@ -40,10 +61,10 @@ export default function Form(props) {
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">
-          <Button danger onClick={() => cancel()}>
+          <Button danger onClick={cancel}>
             Cancel
           </Button>
-          <Button confirm onClick={() => onSave(studentName, interviewerID)}>
+          <Button confirm onClick={validate}>
             Save
           </Button>
         </section>
