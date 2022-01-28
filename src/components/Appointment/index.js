@@ -58,7 +58,7 @@ export default function Appointment(props) {
 
   };
 
-  console.log("app props ", interview);
+  // console.log("app props ", interview);
   return (
     <article className="appointment">
       <Header time={time} />

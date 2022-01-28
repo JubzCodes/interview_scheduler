@@ -22,7 +22,7 @@ const interviewers = [
 
 export default function Application(props) {
   
-  const { state, setDay, bookInterview, cancelInterview } =
+  const { state, setDay, bookInterview, cancelInterview, updateSpots } =
     useApplicationData();
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
