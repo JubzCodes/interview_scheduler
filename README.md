@@ -24,13 +24,11 @@ npm run storybook
 
 ## Final Product
 
-![""]()
+!["Standard appointments"](https://github.com/JubzCodes/interview_scheduler/blob/master/docs/appointments.png)
 
-![""]()
+!["Create appointment"](https://github.com/JubzCodes/interview_scheduler/blob/master/docs/appointment-form.png)
 
-![""]()
-
-![""]()
+!["New appointment"](https://github.com/JubzCodes/interview_scheduler/blob/master/docs/complete-appointment.png)
 
 
 ## Dependencies
