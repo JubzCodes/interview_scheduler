@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 export function useApplicationData() {
@@ -31,7 +31,7 @@ export function useApplicationData() {
       .put(`api/appointments/${id}`, appointment)
       .then((res) => {
         if (res) {
-        setState({ ...state, appointments, days: updateSpots(add) });
+          setState({ ...state, appointments, days: updateSpots(add) });
         }
         console.log("state", state);
       })
@@ -80,7 +80,6 @@ export function useApplicationData() {
         throw err;
       });
   }
-
 
   // export function
   // const getSpotsForDay = function (day, appointments) {

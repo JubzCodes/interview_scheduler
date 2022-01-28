@@ -1,6 +1,5 @@
 import React from "react";
 import useVisualMode from "hooks/useVisualMode";
-import { Fragment } from "react";
 import Header from "./Header";
 import Show from "./Show";
 import Empty from "./Empty";
@@ -9,7 +8,6 @@ import Status from "./Status";
 import Confirm from "./Confirm";
 import Error from "./Error";
 import "./styles.scss";
-import InterviewerListItem from "components/InterviewerListItem";
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
@@ -24,7 +22,6 @@ const ERROR_DELETE="ERROR_DELETE";
 export default function Appointment(props) {
   const {
     id,
-    interviewer,
     time,
     interview,
     interviewers,
@@ -58,7 +55,6 @@ export default function Appointment(props) {
 
   };
 
-  // console.log("app props ", interview);
   return (
     <article className="appointment">
       <Header time={time} />
