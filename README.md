@@ -32,7 +32,7 @@ npm run storybook
 
 
 ## Dependencies
-
+- https://github.com/JubzCodes/scheduler-api (api server)
 - "@babel/core": "^7.4.3",
 - "@storybook/addon-actions": "^5.0.10",
 - "@storybook/addon-backgrounds": "^5.0.10",

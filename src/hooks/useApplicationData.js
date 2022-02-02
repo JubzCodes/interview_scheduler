@@ -70,29 +70,6 @@ export function useApplicationData() {
       });
   }
 
-  // export function
-  // const getSpotsForDay = function (day, appointments) {
-  //   let spots = 0;
-  //   for (const id of day.appointments) {
-  //     const appointment = appointments[id];
-  //     if (!appointment.interview) {
-  //       spots++;
-  //     }
-  //   }
-  //   return spots;
-  // }; //iterate the days appointments id's
-
-  // const updateSpots = function (state, appointments, id) {
-  //   // Get day object
-  //   const dayObj = state.days.find((day) => day.name === state.day);
-  //   const spots = getSpotsForDay(dayObj, appointments);
-  //   const day = { ...dayObj, spots };
-  //   const newDays = state.days.map((d) => (d.name === state.day ? day : d));
-
-  //   // return days array
-  //   return newDays;
-  // };
-
   const [state, setState] = useState({
     day: "Monday",
     days: [],

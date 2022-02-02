@@ -11,20 +11,18 @@ export function getAppointmentsForDay(state, day) {
   return answer;
 }
 
+
 export function getInterview(state, interview) {
-  if (!interview) {
-    return null;
+  const { interviewers } = state;
+
+  if (interview) {
+    const interviewer = interviewers[interview.interviewer];
+    return { student: interview.student, interviewer };
   }
-  let obj = { student: interview.student, interviewer: {} };
-  const picker = interview["interviewer"].toString();
-  for (const ints in state.interviewers) {
-    let word = ints;
-    word = "1"
-    const add = state.interviewers[picker];
-    obj.interviewer = add;
-    return obj;
-  }
+
+  return null;
 }
+
 
 export function getInterviewersForDay(state, day) {
   const answer = [];
